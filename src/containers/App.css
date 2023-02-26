@@ -28,22 +28,21 @@
         border-radius: 50%;
         background-color: #08b0d1;
         animation-name: animate;
-        animation-duration: 3s;
+        animation-duration: 2s;
         animation-iteration-count: infinite;
-        
     }
 
     .animation:nth-child(2) {
-        animation-delay: 1s;
+        animation-name: animate2;
     }
 
     .animation:nth-child(3) {
-        animation-delay: 2s;
+        animation-name: animate3;
     }
 
     @keyframes animate { 
         0% {
-           background: #08b0d1;
+           background: transparent;
         }
 
         25% {
@@ -52,6 +51,50 @@
 
         50% {
         
+            background: #08b0d1;
+        }
+
+        75% {
+            background: #08b0d1;
+        }
+
+        100% {
+            background: #08b0d1;
+        }
+    }
+
+    @keyframes animate2 { 
+        0% {
+           background: transparent;
+        }
+
+        25% {
+            background: transparent;
+        }
+
+        50% {
+            background: transparent;
+        }
+
+        75% {
+            background: #08b0d1;
+        }
+
+        100% {
+            background: #08b0d1;
+        }
+    }
+
+    @keyframes animate3 { 
+        0% {
+           background: transparent;
+        }
+
+        25% {
+            background: transparent;
+        }
+
+        50% {
             background: transparent;
         }
 
