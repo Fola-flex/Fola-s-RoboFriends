@@ -110,6 +110,7 @@
 
     .button_list {
         margin: 1rem auto;
+        width: 80%;
     }
 
     .button {
@@ -144,4 +145,16 @@
       }
       @-webkit-keyframes spin {
         to { -webkit-transform: rotate(360deg); }
+      }
+
+      @media (max-width: 768px) {
+        .button_list {
+            width: 100%;
+        } 
+      }
+
+      @media (max-width: 480px) {
+        .f1 {
+            font-size: 2.5rem !important;
+        }
       }

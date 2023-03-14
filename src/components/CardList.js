@@ -12,9 +12,9 @@ const CardList = ({ robots, changeType, load, loadState }) => {
                             id={robots[i].id} 
                             name={robots[i].name} 
                             email={robots[i].email} 
-                            img={changeType}
-                            load={load}
-                            loadState={loadState}
+                            imgType={changeType}
+                            load={() => load(i)}
+                            loadState={loadState.includes(i)}
                             keys={i}
                         />
                     )

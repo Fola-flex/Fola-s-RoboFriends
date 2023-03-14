@@ -1,9 +1,9 @@
-const Image = ({id, img, loadState, load, keys}) => {
+const Image = ({id, imgType, loadState, load, keys}) => {
     return (
         <>
             <img 
             alt=""
-            src={`https://robohash.org/blteuwoqqqe${id}${img}`} 
+            src={`https://robohash.org/plop${id}${imgType}`} 
             onLoad={load}
             id={id}
             />

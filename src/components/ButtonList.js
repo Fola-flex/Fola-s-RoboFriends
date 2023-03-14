@@ -1,8 +1,8 @@
 import Button from "./Button";
 
-const ButtonList = ({ onClick}) => {
+const ButtonList = ({ onClick }) => {
     return (
-        <div className="button_list flex flex-wrap justify-center w-80 mw8">
+        <div className="button_list flex flex-wrap justify-center mw8">
             <Button id="robot" onClick={onClick} value={'Robots'}/>
             <Button id="monster" onClick={onClick} value={'Monsters'}/>
             <Button id="disembodied" onClick={onClick} value={'Disembodied'}/>

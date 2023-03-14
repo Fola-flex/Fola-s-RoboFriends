@@ -8,14 +8,15 @@ import './App.css';
 const App = (props) => {
     const [robots, setRobots] = useState([]);
     const [searchfield, setSearchField] = useState("")
-    const [loaded, setLoaded] = useState(false)
+    const [loaded, setLoaded] = useState([])
+    const [clicked, setClicked] = useState(false)
     const [robot_type, setRobotType] = useState("?200x200")
     
     useEffect(() => {
       fetch('https://jsonplaceholder.typicode.com/users')
       .then(response=> response.json())
       .then(users => setRobots(users))
-    })
+    },[])
 
     const onSearchChange = (event) => {
         setSearchField(event.target.value)
@@ -25,16 +26,22 @@ const App = (props) => {
         e.target.id === "robot" ? setRobotType("?200x200") 
             : e.target.id === "kittens" ? setRobotType("?set=set4") 
             : e.target.id === "monster" ? setRobotType("?set=set2")
-            : e.target.id === "avatar" ? setRobotType("?set=set5")  
+            : e.target.id === "avatar" ? setRobotType("?set=set5") 
+            : e.target.id === "random" ? setRobotType(random()) 
             : setRobotType("?set=set3")    
-        }
+        }  
 
-    const onImageLoaded = () => {
-      setLoaded(true)
+    const random = () => {
+       return `?set=set${Math.floor(Math.random() * 5) + 1}`
     };
 
-    const resetImgState = () => {
-      setLoaded(false)  
+    const onImageLoaded = (id) => {
+        setLoaded(prevState => [...prevState, id])
+        setClicked(true)
+    };
+
+    const resetImgState = (e) => { 
+        setLoaded((prevState) => clicked === true ? prevState : [] )
     }
 
     const type = robot_type;
@@ -56,10 +63,12 @@ const App = (props) => {
             <div className="tc">
                 <h1 className="f1">Fola's RoboFriends</h1>
                 <SearchBox searchChange={onSearchChange}/>
-                <ButtonList  onClick={(e) => {
-                    resetImgState()
-                    changeSrcUrl(e)
-                }}/>
+                <ButtonList  
+                    onClick={(e) => {
+                        resetImgState(e)
+                        changeSrcUrl(e)
+                    }}
+                />
                 <Scroll>
                     <CardList loadState={loaded} load={onImageLoaded} changeType={type} robots={filteredRobots} />
                 </Scroll>
