@@ -15,7 +15,6 @@ const CardList = ({ robots, changeType, load, loadState }) => {
                             imgType={changeType}
                             load={() => load(i)}
                             loadState={loadState.includes(i)}
-                            keys={i}
                         />
                     )
                 })
