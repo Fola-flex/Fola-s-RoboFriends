@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Fola-s-RoboFriends/static/css/main.772c6a7e.css",
-    "main.js": "/Fola-s-RoboFriends/static/js/main.b43f8846.js",
+    "main.css": "/Fola-s-RoboFriends/static/css/main.87af064e.css",
+    "main.js": "/Fola-s-RoboFriends/static/js/main.4610dbf0.js",
     "static/js/787.4f2e6267.chunk.js": "/Fola-s-RoboFriends/static/js/787.4f2e6267.chunk.js",
     "static/media/SEGA.woff": "/Fola-s-RoboFriends/static/media/SEGA.47b4bfa94ef243af4a5b.woff",
     "index.html": "/Fola-s-RoboFriends/index.html",
-    "main.772c6a7e.css.map": "/Fola-s-RoboFriends/static/css/main.772c6a7e.css.map",
-    "main.b43f8846.js.map": "/Fola-s-RoboFriends/static/js/main.b43f8846.js.map",
+    "main.87af064e.css.map": "/Fola-s-RoboFriends/static/css/main.87af064e.css.map",
+    "main.4610dbf0.js.map": "/Fola-s-RoboFriends/static/js/main.4610dbf0.js.map",
     "787.4f2e6267.chunk.js.map": "/Fola-s-RoboFriends/static/js/787.4f2e6267.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.772c6a7e.css",
-    "static/js/main.b43f8846.js"
+    "static/css/main.87af064e.css",
+    "static/js/main.4610dbf0.js"
   ]
 }
